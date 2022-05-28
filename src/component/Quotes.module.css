@@ -1,0 +1,14 @@
+.quote {
+  margin-top: 15px;
+}
+
+.author {
+  margin: 40px 30px 0 0;
+  text-align: right;
+}
+
+p {
+  font-family: "Gugi", cursive;
+  font-size: larger;
+  color: black;
+}
