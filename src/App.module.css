@@ -1,30 +1,54 @@
-.navBar {
-  height: 7vh;
-  padding: 5px;
-  position: relative;
-}
-
-.logo {
-  margin-left: 20px;
-  width: 100px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.containerApp {
-  min-height: 93vh;
+.content {
+  background-color: rgba(135, 192, 202, 0.479);
+  padding: 10px;
+  height: 100vh;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  overflow: hidden;
 }
-.App {
-  background-color: transparent;
-  padding: 20px;
-  width: 600px;
-  min-height: 200px;
-  border-radius: 20px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.2);
+
+.circle {
+  height: 700px;
+  width: 700px;
+  border-radius: 50%;
+  opacity: 0.7;
+  filter: blur(50px);
+  position: absolute;
+}
+
+.one {
+  top: 0;
+}
+.twe {
+  bottom: 0;
+}
+.three {
+  right: 0px;
+}
+.four {
+  right: 0;
+  bottom: 0;
+}
+.five {
+  top: 200px;
+  left: 370px;
+}
+.six {
+  right: 500px;
+  top: 300px;
+}
+.six {
+  right: 500px;
+  bottom: 200px;
+}
+.seven {
+  right: 700px;
+  bottom: 100px;
+}
+
+.contentQuotes {
   position: relative;
 }

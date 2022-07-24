@@ -1,3 +1,14 @@
+.quoteContainer {
+  background-color: rgba(255, 255, 255, 0.164);
+  backdrop-filter: blur(50px);
+  padding: 20px;
+  min-width: 320px;
+  max-width: 600px;
+  min-height: 200px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
 .quote {
   margin-top: 15px;
 }
@@ -8,7 +19,6 @@
 }
 
 p {
-  font-family: "Gugi", cursive;
   font-size: larger;
   color: black;
 }

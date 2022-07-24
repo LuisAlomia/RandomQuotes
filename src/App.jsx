@@ -1,50 +1,50 @@
-import style from "./App.module.css";
 import React, { useState } from "react";
-import Button from "./component/Button";
+import indexRandom from "./utils/random";
 import Quotes from "./component/Quotes";
-import data from "./quotes.json";
-import logo from "./logo.svg";
-
-const colors = [
-  "#FFCC8F",
-  "#FAD4D4",
-  "#C1F4C5",
-  "#C0D8C0",
-  "#C85C5C",
-  "#C7BEA2",
-  "#FCF0C8",
-  "#AEE1E1",
-  "#DFBAF7",
-];
+import Button from "./component/Button";
+import data from "./data/quotes.json";
+import colors from "./data/colors.json";
+import style from "./App.module.css";
 
 function App() {
-  const numberRandom = (array) => Math.floor(Math.random() * array.length);
-
-  const indexRandom = (array) => {
-    const index = numberRandom(array);
-    return array[index];
-  };
-
   const [quotes, setQuote] = useState(indexRandom(data));
   const [color, setColor] = useState(indexRandom(colors));
 
-  const quotesAndColorRandom = () => {
-    setQuote(indexRandom(data));
-    setColor(indexRandom(colors));
-  };
-
   return (
-    <>
-      <nav className={style.navBar} style={{ backgroundColor: color }}>
-        <img className={style.logo} src={logo} alt="logo" />
-      </nav>
-      <div className={style.containerApp} style={{ backgroundColor: color }}>
-        <div className={style.App}>
-          <Quotes quotes={quotes} />
-          <Button quotesAndColorRandom={quotesAndColorRandom} />
-        </div>
+    <div className={style.content}>
+      <div
+        className={`${style.circle} ${style.one}`}
+        style={{ backgroundColor: "#B2A4FF" }}
+      ></div>
+      <div
+        className={`${style.circle} ${style.twe}`}
+        style={{ backgroundColor: color }}
+      ></div>
+      <div
+        className={`${style.circle} ${style.three}`}
+        style={{ backgroundColor: color }}
+      ></div>
+      <div
+        className={`${style.circle} ${style.four}`}
+        style={{ backgroundColor: color }}
+      ></div>
+      <div
+        className={`${style.circle} ${style.five}`}
+        style={{ backgroundColor: color }}
+      ></div>
+      <div
+        className={`${style.circle} ${style.six}`}
+        style={{ backgroundColor: "#B8F1B0" }}
+      ></div>
+      <div
+        className={`${style.circle} ${style.seven}`}
+        style={{ backgroundColor: color }}
+      ></div>
+      <div className={style.contentQuotes}>
+        <Quotes quotes={quotes} />
+        <Button setQuote={setQuote} setColor={setColor} />
       </div>
-    </>
+    </div>
   );
 }
 
